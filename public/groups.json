@@ -243,6 +243,9 @@
         {
           "path": "json/mac_osx_on_rdp.json"
         },
+	{
+	  "path": "json/swap_option_and_command.json"
+	},
         {
           "path": "json/french_mac_keyboard_remote_desktop.json",
           "extra_description_path": "extra_descriptions/french_mac_keyboard_remote_desktop.json.html"

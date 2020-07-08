@@ -1,0 +1,162 @@
+{
+  "title": "Apple keyboard mappings for Windows",
+  "rules": [
+    {
+      "description": "Swap Option [Alt] and Command [Win] keys on Apple keyboards",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome\\.app"
+              ],
+              "file_paths": [
+                "/Chrome Remote Desktop\\.app"
+              ],
+              "description": "Chrome Remote Desktop app for MacOS"
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1452,
+                  "is_keyboard": true
+                }
+              ],
+              "description": "Apple keyboard"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome\\.app"
+              ],
+              "file_paths": [
+                "/Chrome Remote Desktop\\.app"
+              ],
+              "description": "Chrome Remote Desktop app for MacOS"
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1452,
+                  "is_keyboard": true
+                }
+              ],
+              "description": "Apple keyboard"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome\\.app"
+              ],
+              "file_paths": [
+                "/Chrome Remote Desktop\\.app"
+              ],
+              "description": "Chrome Remote Desktop app for MacOS"
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1452,
+                  "is_keyboard": true
+                }
+              ],
+              "description": "Apple keyboard"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome\\.app"
+              ],
+              "file_paths": [
+                "/Chrome Remote Desktop\\.app"
+              ],
+              "description": "Chrome Remote Desktop app for MacOS"
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1452,
+                  "is_keyboard": true
+                }
+              ],
+              "description": "Apple keyboard"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
