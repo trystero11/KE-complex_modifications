@@ -1,0 +1,93 @@
+{
+    "title": "Home and End keys",
+    "rules": [
+
+        {
+            "description": "Select to start/end of document (ctrl+shift+home/ctrl+shift+end)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("home", ["control"], ["shift"]) %>,
+                    "to": <%= to([["up_arrow", ["left_command"], ["left_shift"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("end", ["control"], ["shift"]) %>,
+                    "to": <%= to([["down_arrow", ["left_command"], ["left_shift"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                }
+            ]
+        },
+        {
+            "description": "Select to start/end of line (shift+home/shift+end)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("home", ["shift"], ["any"]) %>,
+                    "to": <%= to([["left_arrow", ["left_command"], ["left_shift"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("end", ["shift"], ["any"]) %>,
+                    "to": <%= to([["right_arrow", ["left_command"], ["left_shift"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                }
+            ]
+        },
+
+        {
+            "description": "Top/bottom of document (ctrl+home/ctrl+end)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("home", ["control"], ["any"]) %>,
+                    "to": <%= to([["up_arrow", ["left_command"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("end", ["control"], ["any"]) %>,
+                    "to": <%= to([["down_arrow", ["left_command"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                }
+            ]
+        },
+        {
+            "description": "Home/end keys to the beginning/end line",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("home", [], ["any"]) %>,
+                    "to": <%= to([["a", ["left_control"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("end", [], ["any"]) %>,
+                    "to": <%= to([["e", ["right_control"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                }
+            ]
+        },
+        {
+            "description": "Move by word (command+right/command+left)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("right_arrow", ["command"], ["any"]) %>,
+                    "to": <%= to([["right_arrow", ["left_option"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("left_arrow", ["command"], ["any"]) %>,
+                    "to": <%= to([["left_arrow", ["left_option"]]]) %>,
+                    "conditions": [ <%= frontmost_application_unless(["remote_desktop", "virtual_machine"]) %> ]
+                }
+
+            ]
+        }
+    ]
+}
