@@ -475,6 +475,9 @@
       "name": "Key Specific",
       "id": "key-specific",
       "files": [
+{
+  "path": "json/home_end.json"
+},
         {
           "path": "json/ctrl-to-shift.json"
         },

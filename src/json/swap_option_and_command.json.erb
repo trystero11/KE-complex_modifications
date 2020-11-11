@@ -2,7 +2,7 @@
   "title": "Apple keyboard mappings for Windows",
   "rules": [
     {
-      "description": "Swap Option [Alt] and Command [Win] keys on Apple keyboards",
+      "description": "Swap Option [Alt] and Command [Win] keys in Chrome Remote Desktop.",
       <%
         applications = {
           "type"=>"frontmost_application_if",
@@ -15,42 +15,30 @@
           "description"=>"Chrome Remote Desktop app for MacOS"
         }
       %>
-      <%
-        apple_keyboard = {
-          "type"=>"device_if",
-          "identifiers": [
-            {
-              "vendor_id": 1452,
-              "is_keyboard": true
-            }
-          ],
-          "description": "Apple keyboard"
-        }
-      %>
       "manipulators": [
         {
           "type": "basic",
           "from": <%= from("left_option", [], ["any"]) %>,
           "to": <%= to([["left_command"]]) %>,
-          "conditions": <%= JSON.generate([applications, apple_keyboard]) %>
+          "conditions": <%= JSON.generate([applications]) %>
         },
         {
           "type": "basic",
           "from": <%= from("left_command", [], ["any"]) %>,
           "to": <%= to([["left_option"]]) %>,
-          "conditions": <%= JSON.generate([applications, apple_keyboard]) %>
+          "conditions": <%= JSON.generate([applications]) %>
         },
         {
           "type": "basic",
           "from": <%= from("right_option", [], ["any"]) %>,
           "to": <%= to([["right_command"]]) %>,
-          "conditions": <%= JSON.generate([applications, apple_keyboard]) %>
+          "conditions": <%= JSON.generate([applications]) %>
         },
         {
           "type": "basic",
           "from": <%= from("right_command", [], ["any"]) %>,
           "to": <%= to([["right_option"]]) %>,
-          "conditions": <%= JSON.generate([applications, apple_keyboard]) %>
+          "conditions": <%= JSON.generate([applications]) %>
         }
       ]
     }

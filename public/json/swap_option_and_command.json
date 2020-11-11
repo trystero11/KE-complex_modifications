@@ -2,7 +2,7 @@
   "title": "Apple keyboard mappings for Windows",
   "rules": [
     {
-      "description": "Swap Option [Alt] and Command [Win] keys on Apple keyboards",
+      "description": "Swap Option [Alt] and Command [Win] keys in Chrome Remote Desktop.",
       "manipulators": [
         {
           "type": "basic",
@@ -29,16 +29,6 @@
                 "/Chrome Remote Desktop\\.app"
               ],
               "description": "Chrome Remote Desktop app for MacOS"
-            },
-            {
-              "type": "device_if",
-              "identifiers": [
-                {
-                  "vendor_id": 1452,
-                  "is_keyboard": true
-                }
-              ],
-              "description": "Apple keyboard"
             }
           ]
         },
@@ -67,16 +57,6 @@
                 "/Chrome Remote Desktop\\.app"
               ],
               "description": "Chrome Remote Desktop app for MacOS"
-            },
-            {
-              "type": "device_if",
-              "identifiers": [
-                {
-                  "vendor_id": 1452,
-                  "is_keyboard": true
-                }
-              ],
-              "description": "Apple keyboard"
             }
           ]
         },
@@ -105,16 +85,6 @@
                 "/Chrome Remote Desktop\\.app"
               ],
               "description": "Chrome Remote Desktop app for MacOS"
-            },
-            {
-              "type": "device_if",
-              "identifiers": [
-                {
-                  "vendor_id": 1452,
-                  "is_keyboard": true
-                }
-              ],
-              "description": "Apple keyboard"
             }
           ]
         },
@@ -143,16 +113,6 @@
                 "/Chrome Remote Desktop\\.app"
               ],
               "description": "Chrome Remote Desktop app for MacOS"
-            },
-            {
-              "type": "device_if",
-              "identifiers": [
-                {
-                  "vendor_id": 1452,
-                  "is_keyboard": true
-                }
-              ],
-              "description": "Apple keyboard"
             }
           ]
         }
